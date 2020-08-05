@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'reactstrap';
+import CopyToClipboardTextArea from './CopyToClipboardTextArea';
 
 export const XMLReader = () => {
 
@@ -45,9 +46,13 @@ export const XMLReader = () => {
                     </Col>
                     <Col md="6"><h2>{number} word{number > 1 && 's'}</h2></Col>
                 </Row>
-                <Row className="displayText">
-                    {splitTexts && [splitTexts.join('')]}
-                </Row>
+                {splitTexts.length > 0 &&
+                    <Row className="displayText">
+                        <Col md={12}>
+                            <CopyToClipboardTextArea text={[splitTexts.join(' ')]} />
+                        </Col>
+                    </Row>
+                }
             </Col>
         </Row>
     );

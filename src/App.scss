@@ -26,7 +26,19 @@
 
 .displayText {
   background-color: #4e4e4e;
-  padding: 2rem;
+  padding: 1rem 2rem;
   margin: 1rem 4rem 2rem;
   color: rgb(170, 255, 181);
+}
+
+.textArea {
+  position: relative;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 55vh;
+  max-height: 55vh;
+  padding: 10px 1.25%;
+  margin: 0 10px;
+  overflow-y: auto;
+  background-color: rgb(168, 167, 167);
 }
